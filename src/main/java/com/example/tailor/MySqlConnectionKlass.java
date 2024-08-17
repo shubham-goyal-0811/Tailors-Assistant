@@ -9,7 +9,7 @@ public class MySqlConnectionKlass {
         Connection con = null;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con =  DriverManager.getConnection("jdbc:mysql://localhost/tailor","root","Shubh@m08");
+            con =  DriverManager.getConnection("jdbc:mysql://localhost/tailor","your-username","your-password");
             //works on singleton design pattern
         }
         catch (SQLException exp){
