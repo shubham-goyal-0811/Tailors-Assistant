@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@../second.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tailor.workerconsole.workerConsoleController">
+   <children>
+      <Label alignment="CENTER" layoutY="34.0" prefHeight="42.0" prefWidth="600.0" text="Products Assigned to you">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="workerName" layoutX="225.0" layoutY="115.0" onAction="#selectWorker" prefWidth="150.0" />
+      <ListView fx:id="orderlist" layoutX="37.0" layoutY="214.0" onMouseClicked="#updateStatus" prefHeight="173.0" prefWidth="150.0" />
+      <ListView fx:id="dresslist" layoutX="232.0" layoutY="214.0" prefHeight="173.0" prefWidth="150.0" />
+      <ListView fx:id="datelist" layoutX="429.0" layoutY="214.0" prefHeight="173.0" prefWidth="150.0" />
+      <Button fx:id="RecieveBtn" layoutX="246.0" layoutY="452.0" mnemonicParsing="false" onAction="#doRecieve" text="Recieved All" />
+      <Label layoutX="47.0" layoutY="190.0" text="Order Id" />
+      <Label layoutX="429.0" layoutY="190.0" text="Date of Delivery" />
+      <Label layoutX="239.0" layoutY="190.0" text="Dress" />
+   </children>
+</AnchorPane>

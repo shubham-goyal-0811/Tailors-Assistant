@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="554.0" prefWidth="819.0" style="-fx-background-color: #f6f6f9;" stylesheets="@../second.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tailor.dashboard.dashboardController">
+    <children>
+        <Button fx:id="btn" alignment="CENTER" layoutX="69.0" layoutY="408.0" mnemonicParsing="false" onAction="#doSliding" prefHeight="25.0" prefWidth="64.0" styleClass="btn" text="Log in" />
+        <TextField fx:id="username" layoutX="31.0" layoutY="273.0" prefHeight="25.0" prefWidth="164.0" promptText="Username" styleClass="text-field">
+            <font>
+                <Font name="Microsoft Sans Serif" size="13.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="password" layoutX="31.0" layoutY="321.0" onKeyPressed="#keyEnter" prefHeight="25.0" prefWidth="164.0" promptText="Password" styleClass="text-field">
+            <font>
+                <Font name="Microsoft Sans Serif" size="13.0" />
+            </font>
+        </PasswordField>
+        <FontAwesomeIcon fill="#333333" glyphName="USER" layoutX="8.0" layoutY="296.0" size="1.8em" />
+        <FontAwesomeIcon fill="#333333" glyphName="LOCK" layoutX="10.0" layoutY="344.0" size="1.8em" text="" />
+        <FontAwesomeIcon fill="#333333" glyphName="USERS" layoutX="15.0" layoutY="178.0" size="10em" text="" />
+        <AnchorPane fx:id="slider" layoutX="6.0" layoutY="2.0" prefHeight="554.0" prefWidth="190.0" style="-fx-background-color: #fff;" styleClass="slider">
+            <children>
+                <Label layoutX="50.0" layoutY="43.0" styleClass="analytics" text="Dashboard">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <VBox layoutY="111.0" prefHeight="371.0" prefWidth="190.0" AnchorPane.bottomAnchor="70.0">
+                    <children>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openEnrollment" prefWidth="190.0" styleClass="menuBtn" text="Customer Enrolment">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="TABLE" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openMeasurement" prefWidth="190.0" styleClass="menuBtn" text="Measurements">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="BOOK" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openWorkers" prefWidth="190.0" styleClass="menuBtn" text="Worker Console">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="DESKTOP" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openReady" prefWidth="190.0" styleClass="menuBtn" text="Ready Products">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="CUBES" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openDeliv" prefWidth="190.0" styleClass="menuBtn" text="Order Delivery">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="TRUCK" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#OpenWorkerT" prefWidth="190.0" styleClass="menuBtn" text="Worker Table">
+                            <VBox.margin>
+                                <Insets bottom="6.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="TABLE" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openMeasureExp" prefWidth="190.0" styleClass="menuBtn" text="Measurement Explorer">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <graphic>
+                                <FontAwesomeIcon glyphName="SEARCH" size="1.8em" styleClass="menuIcon" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+                <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="84.0" layoutY="524.0" onMouseClicked="#doLogout" size="1.8em" />
+            </children>
+        </AnchorPane>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="120.0" layoutX="216.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="190.0" />
+        <Label layoutX="216.0" layoutY="27.0" styleClass="analytics" text="Analytics">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="120.0" layoutX="416.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="190.0" />
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="120.0" layoutX="615.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="190.0" />
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="120.0" layoutX="216.0" layoutY="413.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="282.0" />
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="120.0" layoutX="523.0" layoutY="413.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="282.0" />
+        <FontAwesomeIcon glyphName="CALENDAR" layoutX="375.0" layoutY="84.0" size="1.5em" styleClass="menuIcon" />
+        <FontAwesomeIcon glyphName="DOLLAR" layoutX="583.0" layoutY="82.0" size="1.5em" styleClass="menuIcon" />
+        <FontAwesomeIcon glyphName="DOLLAR" layoutX="783.0" layoutY="81.0" size="1.2em" styleClass="menuIcon" />
+        <FontAwesomeIcon glyphName="DOLLAR" layoutX="774.0" layoutY="80.0" size="1.2em" styleClass="menuIcon" />
+        <FontAwesomeIcon glyphName="SPINNER" layoutX="466.0" layoutY="441.0" size="1.8em" styleClass="menuIcon" />
+        <FontAwesomeIcon glyphName="CHECK" layoutX="776.0" layoutY="442.0" size="1.8em" styleClass="menuIcon" text="" />
+        <Label layoutX="241.0" layoutY="79.0" text="Today's Orders" textFill="#d0d0d0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="436.0" layoutY="79.0" text="Today's Revenue" textFill="#d0d0d0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="638.0" layoutY="79.0" text="Total Revenue" textFill="#d0d0d0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="232.0" layoutY="426.0" text="In Progress" textFill="#d0d0d0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="to" layoutX="241.0" layoutY="121.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <Label fx:id="tr" layoutX="436.0" layoutY="121.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <Label fx:id="tor" layoutX="638.0" layoutY="121.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <Label fx:id="ip" layoutX="234.0" layoutY="473.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <Label layoutX="542.0" layoutY="453.0" text="Received" textFill="#d0d0d0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="542.0" layoutY="482.0" text="Delivered" textFill="#d0d0d0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="r" layoutX="761.0" layoutY="453.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="d" layoutX="761.0" layoutY="482.0" styleClass="analytics" text="0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="202.0" layoutX="523.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="box" width="282.0" />
+        <Label fx:id="noData" layoutX="627.0" layoutY="281.0" prefHeight="37.0" prefWidth="82.0" text="No Data">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <PieChart fx:id="pichart" layoutX="531.0" layoutY="199.0" prefHeight="202.0" prefWidth="273.0" />
+        <Label layoutX="221.0" layoutY="211.0" prefHeight="37.0" prefWidth="230.0" styleClass="analytics" text="Welcome to Tailor's Assistant!">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_LEFT" layoutX="221.0" layoutY="251.0" prefHeight="120.0" prefWidth="230.0" text="Your all-in-one solution for managing appointments, client details, orders, and inventory. Streamline your workflow and focus on crafting perfect garments with ease." textFill="#d0d0d0" wrapText="true">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="545.0" layoutY="215.0" text="Sales" textFill="#d0d0d0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+    </children>
+</AnchorPane>

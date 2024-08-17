@@ -1,0 +1,62 @@
+* {
+    -fx-font-family: "Microsoft Sans Serif";
+}
+.text-field{
+-fx-background-color:transparent;
+-fx-border-color:#333333;
+-fx-border-width:0px 0px 3px 0px;
+-fx-padding: 3px 3px 3px 25px;
+-fx-text-inner-color:#333333;
+-fx-prompt-text-fill: #d0d0d0;
+}
+
+.menuBtn{
+    -fx-padding: 12px 6px;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+    }
+.menuBtn:hover{
+-fx-background-color: #333333;
+-fx-border-color: #333333;
+-fx-text-fill: #ffffff;
+}
+.menuIcon{
+    -fx-fill: #333333;
+}
+.menuBtn:hover .menuIcon {
+    -fx-fill: #FFFFFF;
+}
+.slider{
+    -fx-effect: dropshadow(gaussian, rgba(132, 139, 200, 0.18), 30, 0.2, 0, 4);
+    -fx-background-color: #ffffff;
+}
+.box{
+-fx-effect: dropshadow(gaussian, rgba(132, 139, 200, 0.18), 30, 0.2, 0, 4);
+}
+.analytics{
+-fx-text-fill: #333333;
+}
+.btn{
+ -fx-padding: 5px 1px;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-background-color: #333333;
+    -fx-border-radius: 0.4em;
+    -fx-background-radius: 0.4em;
+    -fx-border-width: 1px;
+    -fx-border-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(132, 139, 200, 0.18), 30, 0.2, 0, 4);
+}
+.button:hover {
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #000000;
+    -fx-background-color: #000000;
+}
+.button:pressed {
+    -fx-effect: innershadow(gaussian, #c5c5c5, 4, 0.5, 1, 1),
+                innershadow(gaussian, #333333, 4, 0.5, -1, -1);
+}
+
+

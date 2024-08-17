@@ -1,0 +1,13 @@
+Order Id,Mobile,Dress,Quantity,Date of Delivvery,Bill,Worker,Status
+1,123,Salwar Suit,4,2024-07-20,3600,geeta,3
+2,845,Shirt,2,2024-07-15,1600,geeta,2
+3,845,Basket,2,2024-07-15,1600,madhav,2
+4,9153,Pant,2,2024-07-26,1600,madhav,2
+5,741,Basket,5,2024-07-25,5000,madhav,2
+6,9153,Pant,2,2024-07-26,1600,madhav,2
+7,123,Pant,1,2024-08-01,800,madhav,3
+8,123456,Salwar Suit,4,2024-07-31,4880,Shreyashi,2
+9,123,Salwar Suit,5,2024-07-16,4500,geeta,3
+10,123,Coat,2,2024-08-01,4000,madhav,3
+11,8847640459,Coat,5,2024-08-01,25000,shubham,3
+12,8847640459,Pant,2,2024-08-08,8000,madhav,1

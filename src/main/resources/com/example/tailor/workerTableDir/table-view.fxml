@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@../second.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tailor.workerTable.workertablecontroller">
+   <children>
+      <Button layoutX="392.0" layoutY="96.0" mnemonicParsing="false" onAction="#getAll" text="All Workers" />
+      <TableView fx:id="tblView" layoutX="41.0" layoutY="168.0" prefHeight="393.0" prefWidth="519.0" />
+      <ComboBox fx:id="spclList" editable="true" layoutX="76.0" layoutY="96.0" onAction="#getSpl" prefWidth="150.0" promptText="Speciality" />
+      <Button layoutX="259.0" layoutY="35.0" mnemonicParsing="false" onAction="#toExcel" text="Excel" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@../second.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tailor.measurement.measurementcontroller">
+   <children>
+      <ImageView fitHeight="139.0" fitWidth="182.0" layoutX="23.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@measurementss.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="232.0" layoutY="62.0" text="Measurements">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="254.0" layoutX="462.0" layoutY="138.0" stroke="BLACK" strokeType="INSIDE" width="115.0" />
+      <Button layoutX="495.0" layoutY="152.0" mnemonicParsing="false" onAction="#doNew" text="New" />
+      <Button layoutX="495.0" layoutY="219.0" mnemonicParsing="false" onAction="#doSave" text="Save" />
+      <Button layoutX="485.0" layoutY="282.0" mnemonicParsing="false" onAction="#doUpdate" text="Update" />
+      <Button layoutX="492.0" layoutY="345.0" mnemonicParsing="false" onAction="#doClose" text="Close" />
+      <Label layoutX="26.0" layoutY="163.0" text="Mobile No." />
+      <TextField fx:id="custMob" layoutX="117.0" layoutY="158.0" prefHeight="35.0" prefWidth="283.0" promptText="Customer Mobile Number" />
+      <Label layoutX="28.0" layoutY="196.0" text="Dress:" />
+      <ComboBox fx:id="dressList" editable="true" layoutX="32.0" layoutY="219.0" prefWidth="150.0" />
+      <Button fx:id="upldBtn" layoutX="287.0" layoutY="209.0" mnemonicParsing="false" onAction="#uploadDesign" prefHeight="39.0" prefWidth="127.0" text="Upload Design" />
+      <Label layoutX="28.0" layoutY="265.0" text="Date of Delivery" />
+      <DatePicker fx:id="dateofDelivery" layoutX="23.0" layoutY="290.0" prefHeight="35.0" prefWidth="225.0" />
+      <Label layoutX="28.0" layoutY="328.0" text="Quantity" />
+      <ComboBox fx:id="qtyList" editable="true" layoutX="23.0" layoutY="353.0" prefHeight="35.0" prefWidth="79.0" />
+      <TextField fx:id="price" layoutX="25.0" layoutY="396.0" onAction="#calcBill" prefHeight="35.0" prefWidth="127.0" promptText="Price per Item" />
+      <Label layoutX="33.0" layoutY="448.0" text="Bill" />
+      <TextField fx:id="billDis" layoutX="26.0" layoutY="470.0" prefHeight="35.0" prefWidth="107.0" />
+      <ComboBox fx:id="workersList" layoutX="27.0" layoutY="539.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="518.0" text="Workers" />
+      <ImageView fx:id="desImg" fitHeight="147.0" fitWidth="161.0" layoutX="279.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@measurementss.jpg" />
+         </image></ImageView>
+      <Label layoutX="248.0" layoutY="413.0" text="Measurements" />
+      <Button fx:id="dofindMes" layoutX="373.0" layoutY="408.0" mnemonicParsing="false" onAction="#findMes" prefHeight="25.0" prefWidth="161.0" text="Find Measurements" />
+      <TextArea fx:id="measure" layoutX="251.0" layoutY="457.0" prefHeight="121.0" prefWidth="313.0" promptText="Measures Taken" />
+      <Label layoutX="439.0" layoutY="23.0" text="Order Status:" />
+      <TextField fx:id="status" layoutX="534.0" layoutY="18.0" prefHeight="19.0" prefWidth="54.0" />
+   </children>
+</AnchorPane>
